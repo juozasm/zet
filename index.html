@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./build/app.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test gallery</title>
+    
+</head>
+
+<body>
+<div id="maingal" class="gallery">
+    <h1>TEST</h1>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices lacus eget sapien sodales scelerisque. Sed in orci ultrices, lobortis ipsum sed, pellentesque enim. Fusce nec blandit quam, ac vulputate ipsum. Donec vel diam libero. Praesent interdum tellus quis dui hendrerit, vel pellentesque neque fermentum.</h2>
+    <hr>
+    <form class="galform" action="#" onsubmit="onSubmit();return false;" >
+        <div>
+            <label for="name">File name:</label>
+            <input type="text" placeholder="Test" id="name" name="file_name" required>
+        </div>
+    
+        <div>
+            <label for="desc">Description:</label>
+            <textarea id="desc" placeholder="Alex" name="description" required></textarea>
+        </div>
+       <div class="uploadItems">
+            <input id="uploadFile" placeholder="No file selected" disabled="disabled"  />
+        <div class="fileUpload">
+            <span>Browse</span>
+            <input id="uploadBtn" type="file" accept="image/*" class="upload" required/>
+        </div>
+        </div>
+        <div class="submitUploadDiv">
+            <input class="submitUpload" type="submit" value="upload">
+        </div>
+       
+    </form>
+    <hr>
+    <section id="gallery" class="gallery-container"></section>
+    <hr>
+    <div  class="pagination">
+            <i id="arrowBack2"></i>
+            <div id="pager"></div>
+            <i id="arrowForward2">
+            </i>
+    </div>
+
+</div>
+<div id="maincom" class="full-width hidden">
+    <h1 id="image-name"></h1>
+    <h2 id="image-desc"></h2>
+    
+    <div class="image-container">
+        <img id="image-img" >
+        <i id="arrowBack"></i>
+        <i id="arrowForward">
+        </i>
+        <div class="arrb"></div>
+        <div class="arrf"></div>
+    </div>
+
+    <div id="comments" class="comments"> </div>
+    <form class="comform" action="#">
+        <div class="name">
+            <label for="person_name">Name</label>
+            <input type="text" id="name" name="person_name" required>
+        </div>
+        <div class="email">
+            <label for="person_email">Email</label>
+            <input type="email" id="name" name="person_email" required>
+        </div>
+
+        <div>
+            <label for="comm">Comment</label>
+            <textarea id="comm" name="comment" required></textarea>
+        </div>
+        <div class="send">
+            <input type="submit" value="SEND">
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="./build/app.js"></script>
+</html>

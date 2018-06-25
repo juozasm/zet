@@ -1,0 +1,107 @@
+#maincom{
+    
+    .comform{
+        .name,.email{
+            display: inline-block;
+            
+            width: calc(100% * (1/2) - 10px);
+        }
+        .name{
+            margin-right: 10px;
+        }
+    }
+    #comments{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        text-align: left;
+        
+        .person-image{
+            display: inline-block;
+            border-radius:100%;
+        }
+        .comment-wrapper{
+            .name{
+                font-weight: bold;
+            }
+            .comment{
+                color:#888888;
+                font-size:13px;
+            }
+            margin:5px 15px;
+            vertical-align: top;
+            display: inline-block;
+        }
+    }  
+    .image-container{
+        #image-img{
+            
+            max-width: 100%;
+            object-fit: cover;
+
+        }
+        position: relative;
+        .arrb{
+            position: absolute;
+            background-color:white;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            left:60px;
+            top:50%;
+            transform:translate(-50%,-40%);
+        }
+        .arrf{
+            
+            position: absolute;
+            z-index: 1;
+            background-color:white;
+            width: 50px;
+            height: 50px;
+            left:calc(100% - 60px);
+            top:50%;
+            transform:translate(-50%,-40%);
+        }
+        i {
+            z-index: 2;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-top: 7px solid;
+            border-right: 7px solid;
+            display: inline-block;
+            color: black;
+            box-sizing: border-box;
+
+          }
+          
+          #arrowForward {
+            position: absolute;
+            left:calc(100% - 60px);
+            top:50%;
+            transform: rotate(45deg);
+            cursor: pointer;
+           
+          }
+          #arrowBack {
+          
+            position: absolute;
+            left:60px;
+            top:50%;
+            transform: rotate(-135deg);
+            cursor: pointer;
+            
+          }
+    }
+    .send{
+        margin: 30px 0;
+        float: right;
+        min-width: 200px;
+        input{
+            background-color:#04b1f9;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+
+}
